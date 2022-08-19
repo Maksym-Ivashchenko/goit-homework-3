@@ -1,5 +1,5 @@
 CREATE TABLE developers(
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT NOT NULL UNIQUE,
 	developer_name VARCHAR(45) NOT NULL,
 	age INT NOT NULL,
     	gender VARCHAR(45) NOT NULL,
@@ -8,14 +8,14 @@ CREATE TABLE developers(
 );
 
 CREATE TABLE skills(
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT NOT NULL UNIQUE,
 	branch VARCHAR(45) NOT NULL,
 	skill_level VARCHAR(45) NOT NULL,
 	CONSTRAINT PK_skills PRIMARY KEY(id)
 );
 
 CREATE TABLE projects(
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT NOT NULL UNIQUE,
 	project_name VARCHAR(45) NOT NULL,
 	project_type VARCHAR(45) NOT NULL,
 	comments VARCHAR(45) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE projects(
 );
 
 CREATE TABLE companies(
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT NOT NULL UNIQUE,
 	company_name VARCHAR(45) NOT NULL,
 	city VARCHAR(45) NOT NULL,
 	email VARCHAR(45) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE companies(
 );
 
 CREATE TABLE customers(
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT NOT NULL UNIQUE,
 	customer_name VARCHAR(45) NOT NULL,
 	country VARCHAR(45) NOT NULL,
 	email VARCHAR(45) NOT NULL,
