@@ -1,7 +1,7 @@
 SELECT sum(d.salary), p.project_name
-from developers as d
-inner join developers_projects as dp on d.id = dp.developer_id
-inner join projects as p on dp.project_id = p.id
-group by p.project_name
-order by sum(d.salary) desc 
-limit 1;
+FROM developers AS d
+INNER JOIN developers_projects AS dp ON d.id = dp.developer_id
+INNER JOIN projects AS p ON dp.project_id = p.id
+GROUP BY p.project_name
+ORDER BY sum(d.salary) DESC 
+LIMIT 1;
